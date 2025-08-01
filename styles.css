@@ -1,0 +1,266 @@
+:root {
+  --gradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  --red-error: hsl(0, 100%, 66%);
+  --white: hsl(0, 100%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+  --font-family: 'Space Grotesk', sans-serif;
+  --font-weight: 500;
+  --font-size-body: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  background-color: var(--white);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid var(--light-grayish-violet);
+  border-radius: 8px;
+}
+
+input::placeholder {
+  color: var(--dark-grayish-violet);
+  opacity: 0.5;
+}
+
+.main-container {
+  display: grid;
+  min-height: 100vh;
+}
+
+.card-display {
+  position: relative;
+  color: var(--white);
+  background-image: url('./images/bg-main-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 240px;
+  padding: 20px;
+}
+
+.card {
+  position: absolute;
+  width: 286px;
+  height: 157px;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  letter-spacing: 1.5px;
+}
+
+.card-back {
+  background: url('./images/bg-card-back.png') no-repeat center/cover;
+  top: 32px;
+  right: 16px;
+}
+
+.card-back .card-cvc {
+  position: absolute;
+  top: 71px;
+  right: 36px;
+  font-size: 0.6em;
+}
+
+.card-front {
+  background: url('./images/bg-card-front.png') no-repeat center/cover;
+  top: 126px;
+  left: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 15px;
+  z-index: 10;
+}
+
+.card-front .card-logo {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 54px;
+}
+
+.card-front .card-number {
+  font-size: 1.1em;
+}
+
+.card-front .card-details {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 0.6em;
+}
+
+.form-container {
+  padding: 24px;
+  padding-top: 90px;
+}
+
+.card-form {
+  display: grid;
+  gap: 20px;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.form-group label {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  letter-spacing: 2px;
+  color: var(--very-dark-violet);
+}
+
+.form-group input {
+  padding: 12px;
+  width: 100%;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: transparent;
+  background-image: var(--gradient);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.expiry-cvc-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#expiry-date-group {
+  display: flex;
+  gap: 10px;
+}
+
+.error-message {
+  color: var(--red-error);
+  font-size: 0.7em;
+  margin-top: -12px;
+  min-height: 1em;
+}
+
+.input-error {
+  border-color: var(--red-error) !important;
+}
+
+.submit-btn {
+  background-color: var(--very-dark-violet);
+  color: var(--white);
+  padding: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: hsl(278, 68%, 20%);
+}
+
+.completed-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.completed-state h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--very-dark-violet);
+  margin-top: 10px;
+}
+
+.completed-state p {
+  color: var(--dark-grayish-violet);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* --- DESKTOP LAYOUT  --- */
+@media (min-width: 1000px) {
+  .main-container {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .card-display {
+    background-image: url('./images/bg-main-desktop.png');
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 35px;
+    overflow: visible;
+  }
+
+  .card {
+    position: static;
+    width: 447px;
+    height: 245px;
+    padding: 28px;
+    letter-spacing: 2px;
+  }
+
+  .card-front {
+    order: 1;
+    transform: translateX(60px);
+  }
+
+  .card-back {
+    order: 2;
+    transform: translateX(140px);
+  }
+
+  .card-front .card-logo {
+    width: 84px;
+    top: 28px;
+    left: 28px;
+  }
+
+  .card-front .card-number {
+    font-size: 1.6em;
+  }
+
+  .card-front .card-details {
+    font-size: 0.8em;
+  }
+
+  .card-back .card-cvc {
+    top: 111px;
+    right: 56px;
+    font-size: 0.8em;
+  }
+
+  .form-container {
+    display: grid;
+    place-items: center;
+    padding: 0;
+  }
+}
