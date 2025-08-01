@@ -43,11 +43,11 @@ Users should be able to:
   <br>
   <table>
     <tr>
-      <td><img src="./images/mobile1.jpg" alt="Active State on Mobile" width="375"></td>
-      <td><img src="./images/mobile2.jpg" alt="Mobile View with Completed State" width="375"></td>
+      <td><img src="./images/mobile3.jpg" alt="Active State on Mobile" width="375"></td>
+      <td><img src="./images/mobile1.jpg" alt="Mobile View with Completed State" width="375"></td>
     </tr>
     <tr>
-      <td><img src="./images/mobile3.jpg" alt="Mobile View with Keyboard" width="375"></td>
+      <td><img src="./images/mobile2.jpg" alt="Mobile View with Keyboard" width="375"></td>
       <td><img src="./images/mobile4.jpg" alt="Mobile View with Validation Errors" width="375"></td>
     </tr>
   </table>
@@ -113,7 +113,7 @@ This project solidified my understanding of core DOM manipulation. For future pr
 
 ## Author
 
-- **Website** - [Victor-Okpe](https://www.emkajnr.dev)
+- **Website** - [Victor-Okpe](https://github.com/Victorbjay)
 
 - **Twitter** - [@victorbjay](https://www.twitter.com/victorbjay)
 
