@@ -30,12 +30,33 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot](./images/Screenshot.png)
+### Screenshot
+
+**Desktop View**
+
+![Desktop view of the project](./images/Screenshot.png)
+
+<br>
+
+<details>
+  <summary><strong>Click to expand: Mobile & Active States</strong></summary>
+  <br>
+  <table>
+    <tr>
+      <td><img src="./images/mobile1.jpg" alt="Active State on Mobile" width="375"></td>
+      <td><img src="./images/mobile2.jpg" alt="Mobile View with Completed State" width="375"></td>
+    </tr>
+    <tr>
+      <td><img src="./images/mobile3.jpg" alt="Mobile View with Keyboard" width="375"></td>
+      <td><img src="./images/mobile4.jpg" alt="Mobile View with Validation Errors" width="375"></td>
+    </tr>
+  </table>
+</details>
 
 ### Links
 
-- **Solution URL:** [Add your GitHub repo URL here](https://github.com/your-username/your-repo-name)
-- **Live Site URL:** [Add your live site URL here](https://your-username.github.io/your-repo-name/)
+- **Solution URL:** [Git-Repo](https://github.com/Victorbjay/my-interactive-card)
+- **Live Site URL:** [my-interactive-card](https://my-interactive-card-two.vercel.app/)
 
 ## My process
 
